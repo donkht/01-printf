@@ -4,11 +4,32 @@
 int ft_printf(const char *s, ...)
 {
 	va_list ap;
+	int	count;
 
+	count = 0;
 	va_start(ap, s);
-				!!!!!!!!!!!!!!!!!!!!!!!!
-	write(1, s, ft_strlen(s));
-	return 0;
+	while (*s)
+	{
+		if (*s != '%')
+		{
+			write(1, s, 1);
+			count++;
+		}
+		if (*s == '%')
+		{
+
+
+
+
+		}
+		s++;
+	}
+
+
+
+
+	va_end(ap);
+	return count;
 }
 
 int	ft_strlen(const char *s)
@@ -27,11 +48,11 @@ int	main(void)
 //	int i = 0xffffff;
 	// char *c = "1234567890";
 
-	count = printf("s");
-	printf("%i\n", count);
+	count = printf("1234567890qwertyuiop");
+	printf("_%i\n", count);
 
-	count = ft_printf("s");
-	printf("%i\n", count);
+	count = ft_printf("1234567890qwertyuiop");
+	printf("_%i\n", count);
 
 	return(0);
 }
