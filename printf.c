@@ -6,10 +6,7 @@ int ft_printf(const char *s, ...)
 	va_list ap;
 
 	va_start(ap, s);
-
-
-
-
+				!!!!!!!!!!!!!!!!!!!!!!!!
 	write(1, s, ft_strlen(s));
 	return 0;
 }
