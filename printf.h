@@ -18,9 +18,9 @@ typedef struct s_flags{
 
 int ft_printf(const char *s, ...);
 int	ft_strlen(const char *s);
-int	ft_process(char **ptrs, va_list ap);
-flags	ft_init_flags(flags f);
-flags	ft_parse_flags(char **ptrs);
+int	ft_process(const char **ptrs, va_list ap);
+flags	ft_init_flags(void);
+flags	ft_parse_flags(const char **ptrs);
 
 #endif
 
